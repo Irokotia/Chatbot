@@ -1,0 +1,70 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - soshelp
+  - responsesos
+  - inform_repository
+  - thankyou
+  - request_repository:
+      use_entities: []
+  
+entities:
+  - repository
+  - repository_name
+  
+  
+slots:
+  repository:
+    type: unfeaturized
+    auto_fill: false
+  repository_language:
+    type: unfeaturized
+    auto_fill: false
+  repository_name:
+    type: unfeaturized
+    auto_fill: false
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  
+  utter_soshelp:
+  - text: "What can i do for you ?"
+
+  utter_soscall:
+  - text: "They're in the way !"
+  
+  utter_goodbye:
+  - text: "See you soon"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  
+  utter_sendsos:
+  - text: "I'm calling 911 please stay calm !"
+  
+  utter_noworries:
+  - text: "No worries"
+  
+  
+forms:
+  - repository_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
